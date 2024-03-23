@@ -150,10 +150,58 @@ public class MyBMI extends JFrame {
 		panel_3.add(lblNewLabel_3);
 		
 		JButton btnNewButton = new JButton("Calculator BMI");
+		btnNewButton.setForeground(new Color(255, 255, 255));
 		btnNewButton.setBackground(new Color(128, 0, 255));
 		btnNewButton.setBorderPainted(false);
 		btnNewButton.setFont(new Font("Times New Roman", Font.PLAIN, 16));
-		btnNewButton.setBounds(33, 357, 326, 33);
+		btnNewButton.setBounds(33, 357, 157, 33);
 		contentPane.add(btnNewButton);
+		
+		JPanel panel_4 = new JPanel();
+		panel_4.setBackground(new Color(255, 218, 185));
+		panel_4.setBounds(33, 400, 326, 69);
+		contentPane.add(panel_4);
+		panel_4.setLayout(null);
+		
+		JLabel lblNewLabel_4 = new JLabel("Kết quả BMI");
+		lblNewLabel_4.setForeground(new Color(0, 0, 0));
+		lblNewLabel_4.setBackground(new Color(255, 255, 255));
+		lblNewLabel_4.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblNewLabel_4.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_4.setBounds(113, 10, 92, 20);
+		panel_4.add(lblNewLabel_4);
+		
+		JLabel lblNewLabel_5 = new JLabel("0");
+		lblNewLabel_5.setForeground(new Color(0, 0, 0));
+		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_5.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblNewLabel_5.setBounds(134, 40, 45, 19);
+		panel_4.add(lblNewLabel_5);
+		
+		Panel panel_5 = new Panel();
+		panel_5.setBackground(new Color(0, 255, 255));
+		panel_5.setBounds(33, 475, 326, 80);
+		contentPane.add(panel_5);
+		panel_5.setLayout(null);
+		
+		JLabel lblNewLabel_6 = new JLabel("Tình trạng sức khỏe");
+		lblNewLabel_6.setForeground(new Color(64, 0, 64));
+		lblNewLabel_6.setHorizontalAlignment(SwingConstants.CENTER);
+		lblNewLabel_6.setFont(new Font("Times New Roman", Font.BOLD, 16));
+		lblNewLabel_6.setBounds(77, 10, 173, 20);
+		panel_5.add(lblNewLabel_6);
+		
+		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setFont(new Font("Times New Roman", Font.BOLD, 18));
+		lblNewLabel_7.setBounds(140, 40, 45, 13);
+		panel_5.add(lblNewLabel_7);
+		
+		JButton btnNewButton_1 = new JButton("Đặt Lại");
+		btnNewButton_1.setBackground(new Color(128, 0, 255));
+		btnNewButton_1.setBorderPainted(false);
+		btnNewButton_1.setForeground(new Color(255, 255, 255));
+		btnNewButton_1.setFont(new Font("Times New Roman", Font.PLAIN, 16));
+		btnNewButton_1.setBounds(200, 357, 159, 33);
+		contentPane.add(btnNewButton_1);
 	}
 }
