@@ -18,6 +18,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import javax.swing.border.MatteBorder;
 import javax.swing.border.TitledBorder;
+import javax.swing.ImageIcon;
 
 public class MyBMI extends JFrame {
 
@@ -114,8 +115,7 @@ public class MyBMI extends JFrame {
 		Panel panel_2 = new Panel();
 		panel_2.setForeground(new Color(0, 0, 255));
 		panel_2.setBackground(new Color(255, 255, 255));
-		panel_2.setBounds(33, 252, 126, 85);
-		panel_2.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(128, 0, 255)));
+		panel_2.setBounds(33, 252, 134, 85);
 		contentPane.add(panel_2);
 		panel_2.setLayout(null);
 		
@@ -123,8 +123,13 @@ public class MyBMI extends JFrame {
 		rdbtnNewRadioButton.setBackground(new Color(255, 255, 255));
 		rdbtnNewRadioButton.setFont(new Font("Times New Roman", Font.PLAIN, 18));
 		rdbtnNewRadioButton.setHorizontalAlignment(SwingConstants.CENTER);
-		rdbtnNewRadioButton.setBounds(13, 32, 103, 21);
+		rdbtnNewRadioButton.setBounds(17, 46, 103, 21);
 		panel_2.add(rdbtnNewRadioButton);
+		
+		JLabel lblNewLabel_2 = new JLabel("");
+		lblNewLabel_2.setIcon(new ImageIcon("E:\\workspace\\63135935-AndroidProgramming\\Cau1_BMI\\nam.png"));
+		lblNewLabel_2.setBounds(53, 0, 36, 43);
+		panel_2.add(lblNewLabel_2);
 		
 		Panel panel_3 = new Panel();
 		panel_3.setBackground(new Color(255, 255, 255));
@@ -136,8 +141,13 @@ public class MyBMI extends JFrame {
 		rdbtnNewRadioButton_1.setBackground(new Color(255, 255, 255));
 		rdbtnNewRadioButton_1.setFont(new Font("Times New Roman", Font.PLAIN, 18));
 		rdbtnNewRadioButton_1.setHorizontalAlignment(SwingConstants.CENTER);
-		rdbtnNewRadioButton_1.setBounds(6, 28, 122, 29);
+		rdbtnNewRadioButton_1.setBounds(6, 38, 122, 29);
 		panel_3.add(rdbtnNewRadioButton_1);
+		
+		JLabel lblNewLabel_3 = new JLabel("");
+		lblNewLabel_3.setIcon(new ImageIcon("E:\\workspace\\63135935-AndroidProgramming\\Cau1_BMI\\nữ.png"));
+		lblNewLabel_3.setBounds(55, -11, 45, 58);
+		panel_3.add(lblNewLabel_3);
 		
 		JButton btnNewButton = new JButton("Calculator BMI");
 		btnNewButton.setBackground(new Color(128, 0, 255));
