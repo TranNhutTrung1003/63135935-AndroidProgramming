@@ -129,6 +129,7 @@ public class MyBMI extends JFrame {
 		rdbtnNewRadioButton.setFont(new Font("Times New Roman", Font.PLAIN, 18));
 		rdbtnNewRadioButton.setHorizontalAlignment(SwingConstants.CENTER);
 		rdbtnNewRadioButton.setBounds(17, 46, 103, 21);
+		rdbtnNewRadioButton.setSelected(true);
 		panel_2.add(rdbtnNewRadioButton);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
@@ -255,5 +256,13 @@ public class MyBMI extends JFrame {
 				lblNewLabel_7.setText("");
 			}
         });
+		
+		btnNewButton.addActionListener((ActionListener) new ActionListener(){
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				String 
+			}
+		});
 	}
 }
