@@ -16,6 +16,8 @@ import javax.swing.JComboBox;
 import java.awt.Panel;
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
+import javax.swing.border.MatteBorder;
+import javax.swing.border.TitledBorder;
 
 public class MyBMI extends JFrame {
 
@@ -59,6 +61,7 @@ public class MyBMI extends JFrame {
 		contentPane.add(lblNewLabel);
 		
 		JPanel panel = new JPanel();
+		panel.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(128, 0, 255)));
 		panel.setBackground(new Color(255, 255, 255));
 		panel.setBounds(33, 151, 326, 85);
 		contentPane.add(panel);
@@ -76,12 +79,15 @@ public class MyBMI extends JFrame {
 		textField.setColumns(10);
 		
 		JComboBox<String> comboBox = new JComboBox<>();
-		comboBox.setBounds(184, 37, 29, 21);
+		comboBox.setBounds(184, 37, 77, 21);
 		panel.add(comboBox);
 		comboBox.addItem("Kg");
 		comboBox.addItem("Pound");
+		comboBox.setSelectedItem("Kg");
+		comboBox.setAlignmentX(SwingConstants.CENTER);
 		
 		JPanel panel_1 = new JPanel();
+		panel_1.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(128, 0, 255)));
 		panel_1.setLayout(null);
 		panel_1.setBackground(Color.WHITE);
 		panel_1.setBounds(33, 44, 326, 85);
@@ -99,14 +105,17 @@ public class MyBMI extends JFrame {
 		panel_1.add(textField_1);
 		
 		JComboBox<String> comboBox_1 = new JComboBox<>();
-		comboBox_1.setBounds(184, 37, 29, 21);
+		comboBox_1.setBounds(184, 37, 78, 21);
 		panel_1.add(comboBox_1);
 		comboBox_1.addItem("cm");
 		comboBox_1.addItem("m");
+		comboBox_1.setSelectedItem("m");
 		
 		Panel panel_2 = new Panel();
+		panel_2.setForeground(new Color(0, 0, 255));
 		panel_2.setBackground(new Color(255, 255, 255));
 		panel_2.setBounds(33, 252, 126, 85);
+		panel_2.setBorder(new TitledBorder(null, "", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(128, 0, 255)));
 		contentPane.add(panel_2);
 		panel_2.setLayout(null);
 		
