@@ -261,7 +261,24 @@ public class MyBMI extends JFrame {
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				// TODO Auto-generated method stub
-				String 
+				String txtchieucao = textField_1.getText().toString();
+				String txtcannang = textField.getText().toString();
+				if(!txtchieucao.isEmpty() && !txtcannang.isEmpty()) {
+					float chieucao = Float.parseFloat(txtchieucao);
+					float cannang = Float.parseFloat(txtcannang);
+					float BMI;
+					if(rdbtnNewRadioButton.isSelected()) {
+						if(comboBox_1.getSelectedItem().toString().equals("cm")) {
+							chieucao = chieucao * 0.01f;
+							if(comboBox.getSelectedItem().toString().equals("kg")) {
+								BMI = (float) (cannang / Math.pow(chieucao, 2));
+							} else {
+								cannang = cannang * 0.454f;
+								BMI = (float) (cannang / Math.pow(chieucao, 2));
+							}
+						}
+					}
+				}
 			}
 		});
 	}
