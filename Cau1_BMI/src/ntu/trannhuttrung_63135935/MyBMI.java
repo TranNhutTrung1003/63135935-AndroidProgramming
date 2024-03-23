@@ -14,6 +14,9 @@ import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
 import java.awt.Panel;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
+
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
 import javax.swing.border.MatteBorder;
@@ -203,5 +206,41 @@ public class MyBMI extends JFrame {
 		btnNewButton_1.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		btnNewButton_1.setBounds(200, 357, 159, 33);
 		contentPane.add(btnNewButton_1);
+		
+		comboBox_1.addItemListener((ItemListener) new ItemListener() {
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				// TODO Auto-generated method stub
+				if (e.getStateChange() == ItemEvent.SELECTED) {
+                    String selectedValue = (String) comboBox_1.getSelectedItem();
+                    if(!textField_1.getText().toString().isEmpty()) {
+                    	float chieucao = Float.parseFloat(textField_1.getText().toString());
+                        if(selectedValue.equals("m")) {
+                        	textField_1.setText(String.valueOf(chieucao * 0.01));
+                        }else {
+                        	textField_1.setText(String.valueOf(chieucao * 100));
+                        }
+                    }	
+                }
+			}
+        });
+		
+		comboBox.addItemListener((ItemListener) new ItemListener() {
+			@Override
+			public void itemStateChanged(ItemEvent e) {
+				// TODO Auto-generated method stub
+				if (e.getStateChange() == ItemEvent.SELECTED) {
+                    String selectedValue = (String) comboBox.getSelectedItem();
+                    if(!textField.getText().toString().isEmpty()) {
+                    	float cannang = Float.parseFloat(textField.getText().toString());
+                        if(selectedValue.equals("Pound")) {
+                        	textField.setText(String.valueOf(cannang * 2.205));
+                        }else {
+                        	textField.setText(String.valueOf(cannang * 0.454));
+                        }
+                    }
+                }
+			}
+        });
 	}
 }
