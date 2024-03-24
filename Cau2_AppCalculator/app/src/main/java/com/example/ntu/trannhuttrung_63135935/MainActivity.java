@@ -176,12 +176,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                txtResult.setText("");
+                txtCongthuc.setText("");
+            }
+        });
+
         btnXoa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 if(!txtResult.getText().toString().isEmpty()){
-                    txtResult.setText("");
-                    txtCongthuc.setText("");
+                    String s = txtResult.getText().toString();
+                    StringBuilder stringBuilder = new StringBuilder(s);
+                    stringBuilder.deleteCharAt(s.length() - 1);
+                    txtResult.setText(stringBuilder.toString());
                 }
             }
         });
