@@ -188,8 +188,8 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="155dp"
+        android:layout_width="363dp"
+        android:layout_height="131dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -215,6 +215,7 @@
             android:layout_marginTop="10dp"
             android:fontFamily="serif"
             android:text="Mục tiêu tương lai của tôi là trở thành một nhà lập trình thành công, có khả năng tạo ra các ứng dụng và sản phẩm công nghệ mang lại giá trị thực cho cộng đồng. "
+            android:textAlignment="center"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
