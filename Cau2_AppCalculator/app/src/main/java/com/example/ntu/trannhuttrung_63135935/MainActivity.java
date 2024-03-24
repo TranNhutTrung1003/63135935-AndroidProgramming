@@ -173,10 +173,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(!txtResult.getText().toString().isEmpty()){
-                    String so = txtResult.getText().toString();
-                    StringBuilder stringBuilder = new StringBuilder(so);
-                    stringBuilder.deleteCharAt(so.length() - 1);
-                    txtResult.setText(stringBuilder.toString());
+                    txtResult.setText("");
+                    txtCongthuc.setText("");
                 }
             }
         });
