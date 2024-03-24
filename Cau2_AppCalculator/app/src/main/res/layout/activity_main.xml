@@ -10,8 +10,9 @@
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="369dp"
-        android:layout_height="254dp"
+        android:id="@+id/constraintLayout"
+        android:layout_width="361dp"
+        android:layout_height="253dp"
         android:background="#CEE6DFDF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,41 +20,46 @@
 
         <TextView
             android:id="@+id/textView3"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:textColor="@color/white"
+            android:layout_width="360dp"
+            android:layout_height="86dp"
+            android:layout_marginBottom="40dp"
+            android:gravity="end"
+            android:paddingBottom="30dp"
+            android:textColor="@color/black"
+            android:textSize="50sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@color/white"
+            android:layout_marginBottom="20dp"
+            android:gravity="end"
+            android:textColor="@color/black"
+            android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/textView3"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="381dp"
+        android:layout_width="355dp"
+        android:layout_height="380dp"
+        android:layout_margin="5dp"
         android:background="@color/white"
         android:columnCount="4"
-        android:paddingLeft="5dp"
-        android:paddingTop="5dp"
-        android:paddingBottom="5dp"
-        android:paddingright="5dp"
         android:rowCount="5"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnC"
             android:layout_width="85dp"
             android:layout_height="70dp"
             android:layout_row="0"
@@ -62,7 +68,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#2F52AC"
             android:text="C"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btnPhanTram"
@@ -74,7 +80,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#2F52AC"
             android:text="%"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn7"
@@ -86,7 +92,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#190547"
             android:text="7"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn8"
@@ -98,7 +104,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#190547"
             android:text="8"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn9"
@@ -110,7 +116,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#190547"
             android:text="9"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btnNhan"
@@ -122,7 +128,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#2F52AC"
             android:text="X"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn4"
@@ -134,7 +140,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#190547"
             android:text="4"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn5"
@@ -146,7 +152,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#190547"
             android:text="5"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn6"
@@ -158,7 +164,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#190547"
             android:text="6"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btnTru"
@@ -170,7 +176,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#2F52AC"
             android:text="-"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn1"
@@ -182,7 +188,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#190547"
             android:text="1"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn2"
@@ -194,7 +200,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#190547"
             android:text="2"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn3"
@@ -206,7 +212,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#190547"
             android:text="3"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btnCong"
@@ -218,7 +224,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#2F52AC"
             android:text="+"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn00"
@@ -230,7 +236,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#190547"
             android:text="00"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btn0"
@@ -242,7 +248,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#190547"
             android:text="0"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btnCham"
@@ -254,7 +260,7 @@
             android:layout_marginRight="3dp"
             android:backgroundTint="#190547"
             android:text="."
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btnBang"
@@ -267,18 +273,7 @@
             android:backgroundTint="#B9E60F"
             android:text="="
             android:textColor="@color/black"
-            android:textSize="16dp" />
-
-        <Button
-            android:id="@+id/btnXoa"
-            android:layout_width="85dp"
-            android:layout_height="70dp"
-            android:layout_row="0"
-            android:layout_column="2"
-            android:layout_marginTop="3dp"
-            android:backgroundTint="#2F52AC"
-            android:text="Clear"
-            android:textSize="15dp" />
+            android:textSize="16sp" />
 
         <Button
             android:id="@+id/btnChia"
@@ -289,7 +284,7 @@
             android:layout_marginTop="3dp"
             android:backgroundTint="#2F52AC"
             android:text="/"
-            android:textSize="16dp" />
+            android:textSize="16sp" />
 
     </GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
