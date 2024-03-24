@@ -98,7 +98,7 @@ public class MyBMI extends JFrame {
 		
 		textField = new JTextField();
 		textField.setFont(new Font("Times New Roman", Font.PLAIN, 16));
-		textField.setBounds(23, 33, 154, 30);
+		textField.setBounds(20, 37, 154, 30);
 		panel.add(textField);
 		textField.setColumns(10);
 		
