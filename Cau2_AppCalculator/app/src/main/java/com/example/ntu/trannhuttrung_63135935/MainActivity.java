@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn1, btn2, btn3, btn4, btn5, btn6, btn7, btn8;
     Button btn9, btn0, btn00, btnCong, btnTru, btnNhan;
-    Button btnChia, btnCham, btnC, btnPhanTram, btnBang;
+    Button btnChia, btnCham, btnXoa, btnC, btnPhanTram, btnBang;
 
     float sohang1 = 0;
 
@@ -54,11 +54,11 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if(txtResult.getText().toString().isEmpty()){
-                        float so = Float.parseFloat(((Button) v).getText().toString());
+                        int so = Integer.parseInt(((Button) v).getText().toString());
                         txtResult.setText(String.valueOf(so));
                     } else {
-                        float so = Float.parseFloat(txtResult.getText().toString());
-                        float phanthem = Float.parseFloat(((Button) v).getText().toString());
+                        int so = Integer.parseInt(txtResult.getText().toString());
+                        int phanthem = Integer.parseInt(((Button) v).getText().toString());
                         txtResult.setText(String.valueOf(so * 10 + phanthem));
                     }
                 }
@@ -150,6 +150,20 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        btnXoa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!txtResult.getText().toString().isEmpty()){
+                    String so = txtResult.getText().toString();
+                    StringBuilder stringBuilder = new StringBuilder(so);
+                    stringBuilder.deleteCharAt(so.length() - 1);
+                    txtResult.setText(stringBuilder.toString());
+                }
+            }
+        });
+
+
     }
 
     public void khoiTao(){
@@ -169,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
         btnTru = findViewById(R.id.btnTru);
         btnNhan = findViewById(R.id.btnNhan);
         btnChia = findViewById(R.id.btnChia);
-//        btnXoa = (Button) findViewById(R.id.btnXoa);
+        btnXoa = (Button) findViewById(R.id.btnXoa);
         btnC =  findViewById(R.id.btnC);
         btnBang = findViewById(R.id.btnBang);
         btnPhanTram =  findViewById(R.id.btnPhanTram);
