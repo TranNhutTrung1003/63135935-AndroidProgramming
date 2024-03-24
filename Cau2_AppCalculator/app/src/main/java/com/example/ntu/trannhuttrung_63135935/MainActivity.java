@@ -38,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         ArrayList<Button> ds_btnValue = new ArrayList<Button>();
-        ds_btnValue.add(btn0);
         ds_btnValue.add(btn1);
         ds_btnValue.add(btn2);
         ds_btnValue.add(btn3);
@@ -163,7 +162,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn00.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!txtResult.getText().toString().isEmpty()){
+                    int so = Integer.parseInt(txtResult.getText().toString());
+                    txtResult.setText(String.valueOf(so * 100));
+                }
+            }
+        });
 
+        btn0.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!txtResult.getText().toString().isEmpty()){
+                    int so = Integer.parseInt(txtResult.getText().toString());
+                    txtResult.setText(String.valueOf(so * 10));
+                }
+            }
+        });
     }
 
     public void khoiTao(){
