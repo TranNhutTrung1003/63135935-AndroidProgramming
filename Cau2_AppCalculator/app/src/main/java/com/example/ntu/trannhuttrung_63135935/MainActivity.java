@@ -56,9 +56,16 @@ public class MainActivity extends AppCompatActivity {
                         int so = Integer.parseInt(((Button) v).getText().toString());
                         txtResult.setText(String.valueOf(so));
                     } else {
-                        int so = Integer.parseInt(txtResult.getText().toString());
-                        int phanthem = Integer.parseInt(((Button) v).getText().toString());
-                        txtResult.setText(String.valueOf(so * 10 + phanthem));
+                        if(txtResult.getText().toString().contains(".")){
+                            String c = txtResult.getText().toString();
+                            String them = ((Button) v).getText().toString();
+                            c += them;
+                            txtResult.setText(c);
+                        } else {
+                            int so = Integer.parseInt(txtResult.getText().toString());
+                            int phanthem = Integer.parseInt(((Button) v).getText().toString());
+                            txtResult.setText(String.valueOf(so * 10 + phanthem));
+                        }
                     }
                 }
             });
@@ -195,6 +202,17 @@ public class MainActivity extends AppCompatActivity {
                 if(!txtResult.getText().toString().isEmpty()){
                     int so = Integer.parseInt(txtResult.getText().toString());
                     txtResult.setText(String.valueOf(so * 10));
+                }
+            }
+        });
+
+        btnCham.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!txtResult.getText().toString().isEmpty() && !txtResult.getText().toString().contains(".")){
+                    String so = txtResult.getText().toString();
+                    so += ".";
+                    txtResult.setText(so);
                 }
             }
         });
