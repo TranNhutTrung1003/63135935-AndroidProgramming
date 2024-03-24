@@ -97,11 +97,13 @@ public class MyBMI extends JFrame {
 		panel.add(lblNewLabel_1);
 		
 		textField = new JTextField();
+		textField.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		textField.setBounds(23, 33, 154, 30);
 		panel.add(textField);
 		textField.setColumns(10);
 		
 		JComboBox<String> comboBox = new JComboBox<>();
+		comboBox.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		comboBox.setBounds(184, 37, 78, 30);
 		panel.add(comboBox);
 		comboBox.addItem("Kg");
@@ -123,11 +125,13 @@ public class MyBMI extends JFrame {
 		panel_1.add(lblNewLabel_1_1);
 		
 		textField_1 = new JTextField();
+		textField_1.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		textField_1.setColumns(10);
 		textField_1.setBounds(20, 38, 154, 30);
 		panel_1.add(textField_1);
 		
 		JComboBox<String> comboBox_1 = new JComboBox<>();
+		comboBox_1.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		comboBox_1.setBounds(184, 37, 78, 30);
 		panel_1.add(comboBox_1);
 		comboBox_1.addItem("cm");
