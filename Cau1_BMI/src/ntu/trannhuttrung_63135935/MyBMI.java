@@ -47,6 +47,22 @@ public class MyBMI extends JFrame {
 			}
 		});
 	}
+	
+	public String checkHeart(float BMI) {
+		if(BMI < 18.5f) {
+			return "gầy";
+		} else if (BMI >= 18.5f && BMI <= 24.9) {
+			return "bình thường";
+		} else if (BMI > 24.9 && BMI <= 29.9) {
+			return "tiền béo phì";
+		} else if (BMI > 29.9 && BMI <= 34.9){
+			return "béo phì độ I";
+		} else if(BMI > 34.9 && BMI <= 39.9) {
+			return "béo phì độ II";
+		} else {
+			return "Béo phì độ III";
+		}
+	}
 
 	/**
 	 * Create the frame.
@@ -277,6 +293,11 @@ public class MyBMI extends JFrame {
 								BMI = (float) (cannang / Math.pow(chieucao, 2));
 							}
 						}
+						lblNewLabel_5.setText(String.valueOf(BMI));
+						
+						 
+					} else {
+						rdbtn
 					}
 				}
 			}
