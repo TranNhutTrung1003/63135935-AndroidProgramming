@@ -45,8 +45,8 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="410dp"
-        android:layout_height="187dp"
+        android:layout_width="409dp"
+        android:layout_height="202dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,6 +59,7 @@
             android:layout_marginTop="16dp"
             android:text="Thông tin cá nhân"
             android:textColor="@color/white"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,9 +70,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="60dp"
             android:text="Ngày sinh"
             android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -79,10 +81,11 @@
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="60dp"
             android:text="10/03/2003"
             android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/textView4"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -90,10 +93,11 @@
             android:id="@+id/textView6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="8dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="16dp"
             android:text="Nghề nghiệp: "
             android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/textView7"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -101,10 +105,11 @@
             android:id="@+id/textView7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="48dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="60dp"
+            android:layout_marginEnd="12dp"
             android:text="Sinh viên"
             android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -113,9 +118,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="84dp"
+            android:layout_marginTop="96dp"
             android:text="Sở thích: "
             android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -123,10 +129,11 @@
             android:id="@+id/textView9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="84dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="28dp"
             android:text="Năng khiếu: "
             android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintEnd_toStartOf="@+id/textView11"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -134,10 +141,11 @@
             android:id="@+id/textView10"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="84dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="96dp"
             android:text="Đọc sách"
             android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintStart_toEndOf="@+id/textView8"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -145,10 +153,11 @@
             android:id="@+id/textView11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="84dp"
-            android:layout_marginEnd="24dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="20dp"
             android:text="Chơi cờ"
             android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -156,19 +165,25 @@
             android:id="@+id/textView12"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="136dp"
             android:text="Địa chỉ: "
             android:textColor="@color/white"
-            tools:layout_editor_absoluteX="16dp"
-            tools:layout_editor_absoluteY="129dp" />
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView13"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="18/5 đường Bùi Huy Bích, Vĩnh Hòa, Nha Trang"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="136dp"
+            android:text="18/5 đường Bùi Huy Bích, Vĩnh Hòa."
             android:textColor="@color/white"
-            tools:layout_editor_absoluteX="101dp"
-            tools:layout_editor_absoluteY="129dp" />
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/textView12"
+            app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 
