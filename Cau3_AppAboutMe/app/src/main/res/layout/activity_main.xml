@@ -200,8 +200,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:fontFamily="cursive"
             android:text="Mục tiêu tương lai"
-            android:textSize="16sp"
+            android:textColor="#DD3434"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -211,7 +213,9 @@
             android:layout_width="308dp"
             android:layout_height="77dp"
             android:layout_marginTop="10dp"
-            android:text="TextView"
+            android:fontFamily="serif"
+            android:text="Mục tiêu tương lai của tôi là trở thành một nhà lập trình thành công, có khả năng tạo ra các ứng dụng và sản phẩm công nghệ mang lại giá trị thực cho cộng đồng. "
+            android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView15" />
