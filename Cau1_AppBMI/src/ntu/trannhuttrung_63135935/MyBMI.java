@@ -154,7 +154,6 @@ public class MyBMI extends JFrame {
 		panel_2.add(rdbtnNewRadioButton);
 		
 		JLabel lblNewLabel_2 = new JLabel("");
-		lblNewLabel_2.setIcon(new ImageIcon("E:\\workspace\\63135935-AndroidProgramming\\Cau1_BMI\\nam.png"));
 		lblNewLabel_2.setBounds(53, 0, 36, 43);
 		panel_2.add(lblNewLabel_2);
 		
@@ -172,7 +171,6 @@ public class MyBMI extends JFrame {
 		panel_3.add(rdbtnNewRadioButton_1);
 		
 		JLabel lblNewLabel_3 = new JLabel("");
-		lblNewLabel_3.setIcon(new ImageIcon("E:\\workspace\\63135935-AndroidProgramming\\Cau1_BMI\\nữ.png"));
 		lblNewLabel_3.setBounds(55, -11, 45, 58);
 		panel_3.add(lblNewLabel_3);
 		
