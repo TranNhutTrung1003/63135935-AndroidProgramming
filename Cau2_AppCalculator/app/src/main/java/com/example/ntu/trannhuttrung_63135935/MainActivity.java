@@ -124,6 +124,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnPhanTram.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!txtResult.getText().toString().isEmpty()){
+                    if(txtCongthuc.getText().toString().isEmpty()){
+                        float so = Float.parseFloat(txtResult.getText().toString());
+                        String value = String.valueOf(so) + " % ";
+                        sohang1 = so;
+                        txtCongthuc.setText(value);
+                    }
+                    txtResult.setText("");
+                }
+            }
+        });
+
         btnBang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -133,16 +148,20 @@ public class MainActivity extends AppCompatActivity {
                         float sum = sohang1 + sohang2;
                         txtResult.setText(String.valueOf(sum));
                     }
-                    if(txtCongthuc.getText().toString().contains("-")) {
+                    else if(txtCongthuc.getText().toString().contains("-")) {
                         float sum = sohang1 - sohang2;
                         txtResult.setText(String.valueOf(sum));
                     }
-                    if(txtCongthuc.getText().toString().contains("x")) {
+                    else if(txtCongthuc.getText().toString().contains("x")) {
                         float sum = sohang1 * sohang2;
                         txtResult.setText(String.valueOf(sum));
                     }
-                    if(txtCongthuc.getText().toString().contains("/")) {
+                    else if(txtCongthuc.getText().toString().contains("/")) {
                         float sum = sohang1 / sohang2;
+                        txtResult.setText(String.valueOf(sum));
+                    }
+                    else{
+                        float sum = sohang1 % sohang2;
                         txtResult.setText(String.valueOf(sum));
                     }
                     txtCongthuc.setText("");
