@@ -24,6 +24,7 @@ import javax.swing.JButton;
 import javax.swing.border.MatteBorder;
 import javax.swing.border.TitledBorder;
 import javax.swing.ImageIcon;
+import java.text.*;
 
 public class MyBMI extends JFrame {
 
@@ -96,12 +97,12 @@ public class MyBMI extends JFrame {
 		panel.add(lblNewLabel_1);
 		
 		textField = new JTextField();
-		textField.setBounds(65, 38, 96, 19);
+		textField.setBounds(23, 33, 154, 30);
 		panel.add(textField);
 		textField.setColumns(10);
 		
 		JComboBox<String> comboBox = new JComboBox<>();
-		comboBox.setBounds(184, 37, 77, 21);
+		comboBox.setBounds(184, 37, 78, 30);
 		panel.add(comboBox);
 		comboBox.addItem("Kg");
 		comboBox.addItem("Pound");
@@ -123,11 +124,11 @@ public class MyBMI extends JFrame {
 		
 		textField_1 = new JTextField();
 		textField_1.setColumns(10);
-		textField_1.setBounds(65, 38, 96, 19);
+		textField_1.setBounds(20, 38, 154, 30);
 		panel_1.add(textField_1);
 		
 		JComboBox<String> comboBox_1 = new JComboBox<>();
-		comboBox_1.setBounds(184, 37, 78, 21);
+		comboBox_1.setBounds(184, 37, 78, 30);
 		panel_1.add(comboBox_1);
 		comboBox_1.addItem("cm");
 		comboBox_1.addItem("m");
@@ -196,8 +197,8 @@ public class MyBMI extends JFrame {
 		JLabel lblNewLabel_5 = new JLabel("0");
 		lblNewLabel_5.setForeground(new Color(0, 0, 0));
 		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
-		lblNewLabel_5.setFont(new Font("Times New Roman", Font.BOLD, 16));
-		lblNewLabel_5.setBounds(134, 40, 45, 19);
+		lblNewLabel_5.setFont(new Font("Times New Roman", Font.BOLD, 20));
+		lblNewLabel_5.setBounds(134, 30, 53, 29);
 		panel_4.add(lblNewLabel_5);
 		
 		Panel panel_5 = new Panel();
@@ -214,8 +215,9 @@ public class MyBMI extends JFrame {
 		panel_5.add(lblNewLabel_6);
 		
 		JLabel lblNewLabel_7 = new JLabel("");
+		lblNewLabel_7.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_7.setFont(new Font("Times New Roman", Font.BOLD, 18));
-		lblNewLabel_7.setBounds(140, 40, 45, 13);
+		lblNewLabel_7.setBounds(10, 40, 306, 30);
 		panel_5.add(lblNewLabel_7);
 		
 		JButton btnNewButton_1 = new JButton("Đặt Lại");
@@ -235,9 +237,9 @@ public class MyBMI extends JFrame {
                     if(!textField_1.getText().toString().isEmpty()) {
                     	float chieucao = Float.parseFloat(textField_1.getText().toString());
                         if(selectedValue.equals("m")) {
-                        	textField_1.setText(String.valueOf(chieucao * 0.01));
+                        	textField_1.setText(String.valueOf(Math.round(chieucao * 0.01f * 10f) / 10f));
                         }else {
-                        	textField_1.setText(String.valueOf(chieucao * 100));
+                        	textField_1.setText(String.valueOf(Math.round(chieucao * 100f * 10f) / 10f));
                         }
                     }	
                 }
@@ -253,9 +255,9 @@ public class MyBMI extends JFrame {
                     if(!textField.getText().toString().isEmpty()) {
                     	float cannang = Float.parseFloat(textField.getText().toString());
                         if(selectedValue.equals("Pound")) {
-                        	textField.setText(String.valueOf(cannang * 2.205));
+                        	textField.setText(String.valueOf(Math.round(cannang * 2.205 * 10f) / 10f));
                         }else {
-                        	textField.setText(String.valueOf(cannang * 0.454));
+                        	textField.setText(String.valueOf(Math.round(cannang * 0.454 * 10f) / 10f));
                         }
                     }
                 }
@@ -273,6 +275,26 @@ public class MyBMI extends JFrame {
 			}
         });
 		
+		rdbtnNewRadioButton.addActionListener((ActionListener) new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				rdbtnNewRadioButton_1.setSelected(false);
+			}
+			
+		});
+		
+		rdbtnNewRadioButton_1.addActionListener((ActionListener) new ActionListener() {
+
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				// TODO Auto-generated method stub
+				rdbtnNewRadioButton.setSelected(false);
+			}
+			
+		});
+		
 		btnNewButton.addActionListener((ActionListener) new ActionListener(){
 			@Override
 			public void actionPerformed(ActionEvent e) {
@@ -282,8 +304,8 @@ public class MyBMI extends JFrame {
 				if(!txtchieucao.isEmpty() && !txtcannang.isEmpty()) {
 					float chieucao = Float.parseFloat(txtchieucao);
 					float cannang = Float.parseFloat(txtcannang);
-					float BMI;
-					if(rdbtnNewRadioButton.isSelected()) {
+					float BMI = 0;
+					if(rdbtnNewRadioButton.isSelected() || rdbtnNewRadioButton_1.isSelected()) {
 						if(comboBox_1.getSelectedItem().toString().equals("cm")) {
 							chieucao = chieucao * 0.01f;
 							if(comboBox.getSelectedItem().toString().equals("kg")) {
@@ -292,13 +314,24 @@ public class MyBMI extends JFrame {
 								cannang = cannang * 0.454f;
 								BMI = (float) (cannang / Math.pow(chieucao, 2));
 							}
+						} else {
+							if(comboBox.getSelectedItem().toString().equals("kg")) {
+								BMI = (float) (cannang / Math.pow(chieucao, 2));
+							} else {
+								cannang = cannang * 0.454f;
+								BMI = (float) (cannang / Math.pow(chieucao, 2));
+							}
 						}
-						lblNewLabel_5.setText(String.valueOf(BMI));
 						
-						 
-					} else {
-						rdbtn
-					}
+						float roundedNumber = (float) (Math.round(BMI * 10f) / 10f);
+						lblNewLabel_5.setText(String.valueOf(roundedNumber));
+						
+						if(rdbtnNewRadioButton.isSelected()) {
+							lblNewLabel_7.setText("Sức khỏe của anh ấy " + checkHeart(BMI));
+						} else {
+							lblNewLabel_7.setText("Sức khỏe của cô ây " + checkHeart(BMI));
+						}
+					} 
 				}
 			}
 		});
