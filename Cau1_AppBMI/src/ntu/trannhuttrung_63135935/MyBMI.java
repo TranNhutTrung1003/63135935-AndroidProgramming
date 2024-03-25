@@ -303,33 +303,35 @@ public class MyBMI extends JFrame {
 					float chieucao = Float.parseFloat(txtchieucao);
 					float cannang = Float.parseFloat(txtcannang);
 					float BMI = 0;
-					if(rdbtnNewRadioButton.isSelected() || rdbtnNewRadioButton_1.isSelected()) {
-						if(comboBox_1.getSelectedItem().toString().equals("cm")) {
-							chieucao = chieucao * 0.01f;
-							if(comboBox.getSelectedItem().toString().equals("kg")) {
-								BMI = (float) (cannang / Math.pow(chieucao, 2));
+					if(chieucao > 0 && cannang > 0) {
+						if(rdbtnNewRadioButton.isSelected() || rdbtnNewRadioButton_1.isSelected()) {
+							if(comboBox_1.getSelectedItem().toString().equals("cm")) {
+								chieucao = chieucao * 0.01f;
+								if(comboBox.getSelectedItem().toString().equals("kg")) {
+									BMI = (float) (cannang / Math.pow(chieucao, 2));
+								} else {
+									cannang = cannang * 0.454f;
+									BMI = (float) (cannang / Math.pow(chieucao, 2));
+								}
 							} else {
-								cannang = cannang * 0.454f;
-								BMI = (float) (cannang / Math.pow(chieucao, 2));
+								if(comboBox.getSelectedItem().toString().equals("kg")) {
+									BMI = (float) (cannang / Math.pow(chieucao, 2));
+								} else {
+									cannang = cannang * 0.454f;
+									BMI = (float) (cannang / Math.pow(chieucao, 2));
+								}
 							}
-						} else {
-							if(comboBox.getSelectedItem().toString().equals("kg")) {
-								BMI = (float) (cannang / Math.pow(chieucao, 2));
+							
+							float roundedNumber = (float) (Math.round(BMI * 10f) / 10f);
+							lblNewLabel_5.setText(String.valueOf(String.valueOf(roundedNumber)));
+							
+							if(rdbtnNewRadioButton.isSelected()) {
+								lblNewLabel_7.setText("Sức khỏe của anh ấy là " + checkHeart(BMI));
 							} else {
-								cannang = cannang * 0.454f;
-								BMI = (float) (cannang / Math.pow(chieucao, 2));
+								lblNewLabel_7.setText("Sức khỏe của cô ây là " + checkHeart(BMI));
 							}
-						}
-						
-						float roundedNumber = (float) (Math.round(BMI * 10f) / 10f);
-						lblNewLabel_5.setText(String.valueOf(String.valueOf(roundedNumber)));
-						
-						if(rdbtnNewRadioButton.isSelected()) {
-							lblNewLabel_7.setText("Sức khỏe của anh ấy là " + checkHeart(BMI));
-						} else {
-							lblNewLabel_7.setText("Sức khỏe của cô ây là " + checkHeart(BMI));
-						}
-					} 
+						} 
+					}
 				}
 			}
 		});
