@@ -8,8 +8,6 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.SwingConstants;
-import javax.swing.BoxLayout;
-import javax.swing.JTextArea;
 import java.awt.Color;
 import javax.swing.JTextField;
 import javax.swing.JComboBox;
@@ -21,10 +19,8 @@ import java.awt.event.ItemListener;
 
 import javax.swing.JRadioButton;
 import javax.swing.JButton;
-import javax.swing.border.MatteBorder;
 import javax.swing.border.TitledBorder;
-import javax.swing.ImageIcon;
-import java.text.*;
+
 
 public class MyBMI extends JFrame {
 
@@ -106,9 +102,9 @@ public class MyBMI extends JFrame {
 		comboBox.setFont(new Font("Times New Roman", Font.PLAIN, 16));
 		comboBox.setBounds(184, 37, 78, 30);
 		panel.add(comboBox);
-		comboBox.addItem("Kg");
+		comboBox.addItem("kg");
 		comboBox.addItem("Pound");
-		comboBox.setSelectedItem("Kg");
+		comboBox.setSelectedItem("kg");
 		comboBox.setAlignmentX(SwingConstants.CENTER);
 		
 		JPanel panel_1 = new JPanel();
@@ -200,7 +196,7 @@ public class MyBMI extends JFrame {
 		lblNewLabel_5.setForeground(new Color(0, 0, 0));
 		lblNewLabel_5.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel_5.setFont(new Font("Times New Roman", Font.BOLD, 20));
-		lblNewLabel_5.setBounds(134, 30, 53, 29);
+		lblNewLabel_5.setBounds(59, 30, 210, 29);
 		panel_4.add(lblNewLabel_5);
 		
 		Panel panel_5 = new Panel();
@@ -326,7 +322,7 @@ public class MyBMI extends JFrame {
 						}
 						
 						float roundedNumber = (float) (Math.round(BMI * 10f) / 10f);
-						lblNewLabel_5.setText(String.valueOf(roundedNumber));
+						lblNewLabel_5.setText(String.valueOf(String.valueOf(roundedNumber)));
 						
 						if(rdbtnNewRadioButton.isSelected()) {
 							lblNewLabel_7.setText("Sức khỏe của anh ấy là " + checkHeart(BMI));
