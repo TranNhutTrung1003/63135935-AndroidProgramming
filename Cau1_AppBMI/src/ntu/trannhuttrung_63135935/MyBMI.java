@@ -61,7 +61,7 @@ public class MyBMI extends JFrame {
 		} else if(BMI > 34.9 && BMI <= 39.9) {
 			return "béo phì độ II";
 		} else {
-			return "Béo phì độ III";
+			return "béo phì độ III";
 		}
 	}
 
@@ -329,9 +329,9 @@ public class MyBMI extends JFrame {
 						lblNewLabel_5.setText(String.valueOf(roundedNumber));
 						
 						if(rdbtnNewRadioButton.isSelected()) {
-							lblNewLabel_7.setText("Sức khỏe của anh ấy " + checkHeart(BMI));
+							lblNewLabel_7.setText("Sức khỏe của anh ấy là " + checkHeart(BMI));
 						} else {
-							lblNewLabel_7.setText("Sức khỏe của cô ây " + checkHeart(BMI));
+							lblNewLabel_7.setText("Sức khỏe của cô ây là " + checkHeart(BMI));
 						}
 					} 
 				}
