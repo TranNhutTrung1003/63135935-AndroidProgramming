@@ -3,7 +3,10 @@ package com.tnt.ntu.viewmenu_bottomnavigation;
 import android.content.Context;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
@@ -57,9 +60,6 @@ public class CustomerFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
-        ArrayList<Customer> lsData;
-        CustomerAdapter adapter;
-        RecyclerView recyclerView;
     }
 
     @Override
@@ -67,5 +67,25 @@ public class CustomerFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_customer, container, false);
+    }
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        ArrayList<Customer> list = new ArrayList<Customer>();
+        CustomerAdapter customerAdapter;
+        RecyclerView recyclerView;
+
+        list.add(new Customer("Nhut Trung", "users", 30));
+        list.add(new Customer("Anh Tu", "users", 20));
+        list.add(new Customer("Hoang Khang", "users", 10));
+        list.add(new Customer("Hoang Tien", "users", 15));
+        list.add(new Customer("Phuong Khang", "users", 20));
+        list.add(new Customer("Hoang Anh", "users", 12));
+
+        customerAdapter = new CustomerAdapter(this.getContext(), list);
+        recyclerView = view.findViewById(R.id.recyclerView_customer);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this.getContext()));
+        recyclerView.setAdapter(customerAdapter);
     }
 }

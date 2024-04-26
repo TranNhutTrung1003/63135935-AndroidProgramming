@@ -38,7 +38,7 @@ public class CustomerAdapter extends RecyclerView.Adapter<CustomerAdapter.Custom
         int age = customer.getTuoi();
         String anh = customer.getAnhKH();
         holder.txtName.setText(name);
-        holder.txtAge.setText(age);
+        holder.txtAge.setText(String.valueOf(age));
         String packedName = holder.itemView.getContext().getPackageName();
         int anhID = holder.itemView.getResources().getIdentifier(anh, "mipmap", packedName);
         holder.txtAnh.setImageResource(anhID);
